@@ -9,8 +9,6 @@ const Posts = () => {
   const [session, setSession] = useState(null);
   const router = useRouter();
 
-  console.log(session);
-
   useEffect(() => {
     const promise = account.get();
 
@@ -101,8 +99,6 @@ const CreatePost = ({ session }) => {
 const PostCard = () => {
   const [posts, setPosts] = useState([]);
 
-  console.log("List Posts", posts);
-
   useEffect(() => {
     const promise = databases.listDocuments(
       "63ac47882a1c65f7d64f",
@@ -136,6 +132,7 @@ const PostCard = () => {
               </div>
               <div>
                 <h1 className="font-semibold">{post.name}</h1>
+                <p className="text-gray-700 text-sm">{post.email}</p>
               </div>
             </div>
             <div className="mt-3">

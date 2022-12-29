@@ -39,7 +39,7 @@ const Navbar = () => {
         {user ? (
           <div className="flex items-center space-x-4">
             <h1 className="text-white font-semibold m-0 p-0">
-              Welcome, {user.email}
+              Welcome, {user.name}
             </h1>
             <button
               onClick={() => clearSession()}
